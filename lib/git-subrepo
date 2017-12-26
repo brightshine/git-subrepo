@@ -1118,11 +1118,7 @@ command-init() {
   # further verified if need be:
   export GIT_SUBREPO_RUNNING="$$"
   export GIT_SUBREPO_COMMAND="$command"
-
-  : "${GIT_SUBREPO_PAGER:=${PAGER:-less}}"
-  if [[ $GIT_SUBREPO_PAGER == less ]]; then
-    GIT_SUBREPO_PAGER='less -FRX'
-  fi
+  export GIT_SUBREPO_PAGER='less'
 }
 
 command-prepare() {
